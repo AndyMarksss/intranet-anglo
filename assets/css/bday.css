@@ -1,0 +1,242 @@
+/*Aniversariantes*/
+.bday {
+    width: 94%;
+    margin: 70px auto;
+    position: relative;
+}
+
+/*inicio para fazer o scroll horizontal*/
+
+.scroll-container:scrollbar {
+    width: 15px;
+    color: black;
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 100%;
+    height: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(200, 200, 200, 0.5);
+    border-radius: 15px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    -webkit-box-shadow: inset 0 0 6px rgba(41, 72, 127, 1.5);
+    background-color: rgb(0, 128, 255);
+}
+
+.scroll-container {
+    position: relative;
+    overflow-x: scroll;
+}
+
+.scroll-content {
+    display: flex;
+    /* ou outra forma de organizar o conteúdo horizontalmente */
+    white-space: nowrap;
+}
+
+.scroll-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Definições das setas */
+.scroll-left,
+.scroll-right {
+    font-size: 104px;
+    width: 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% 50% 50% 50%;
+    /* Arredonda as pontas */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.scroll-left {
+    transform: scaleX(-1) rotate(180deg);
+    /* Inverte horizontalmente para a seta apontar para a esquerda */
+}
+
+.scroll-right {
+    transform: none;
+    /* Sem transformação para a seta apontar para a direita */
+}
+
+
+
+.scroll-arrow {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.scroll-arrow:hover {
+    text-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.3);
+}
+
+/*personalizar no firefox*/
+.scroller {
+    overflow-y: scroll;
+    scrollbar-color: #0A4C95 #ffffff;
+}
+
+/*fim para fazer o scroll horizontal*/
+
+
+.bday-list {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    /*Se tiver menos de 5, alterar 'space-batween' para 'space-evenly'*/
+    justify-content: space-evenly;
+
+    /*Se tiver menos de 5, alterar 'fit-content' para '100%'*/
+    width: 100%;
+
+    white-space: nowrap;
+}
+
+.bday-list-item {
+    flex: 0 0 calc(19.606% - 20px);
+    /* Alteração: Ajuste a largura para acomodar 5 itens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 1px;
+    padding: 40px 20px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.bday-list-item img {
+    width: 50%;
+    border-radius: 150px;
+    transition: 0.5s;
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.3);
+}
+
+.bday-list-item img:hover {
+    transform: scale(1.2);
+}
+
+.bday-list-item h3 {
+    font-size: 22px;
+    margin: 25px auto 20px;
+    margin-bottom: 1px;
+}
+
+.bday-list-item p {
+    font-size: 2vmin;
+    font-weight: 600;
+    padding: 0 30px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+/*botão bday*/
+.btn-bday {
+    background-color: var(--color-third);
+    color: var(--color-first);
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-weight: 700;
+    border: 1px solid var(--color-third);
+    transition: 0.5s;
+    font-size: 2vmin;
+    margin-top: 10px;
+}
+
+.btn-bday:hover {
+    background-color: transparent;
+    color: var(--color-fifth);
+    border: 1px solid var(--color-fifth);
+}
+
+/*responsividade*/
+@media (max-width: 1400px) {
+    .bday-list-item {
+        width: 25%;
+    }
+}
+
+@media (max-width: 1366px) {
+    .bday-list-item {
+        width: 25%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .bday-list-item img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 850px) {
+    .bday-list {
+        flex-direction: column;
+    }
+
+    .bday-list-item {
+        width: 50%;
+        text-align: center;
+    }
+
+    .bday-list-item img {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 620px) {
+    .bday-list-item p {
+        font-size: 3vmin;
+    }
+}
+
+@media (max-width: 428px) {
+    .bday-list-item {
+        width: 80%;
+    }
+
+    .btn-bday {
+        padding: 5px 20px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 414px) {
+    .bday-list-item {
+        width: 80%;
+    }
+
+    .bday-list-item p {
+        font-size: 4vmin;
+    }
+
+    .btn-bday {
+        text-align: center;
+        width: 250px;
+        font-size: 6vmin;
+    }
+}

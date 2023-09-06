@@ -1,0 +1,240 @@
+/*Tutoriais*/
+.tutoriais {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(#243b55, #141e30);
+    justify-content: center;
+    align-items: center;
+}
+
+.tutoriais-content {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.tutoriais-list {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tutoriais-list-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.tutoriais-list-item a {
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/*
+.btn-tuto {
+    background-color: transparent;
+    color: var(--color-first);
+    width: 300px;
+    height: 105px;
+    border-radius: 45px;
+    border: 1px solid var(--color-first);
+    transition: 0.5s;
+}
+  
+.btn-tuto:hover {
+    background-color: transparent;
+    color: var(--color-fifth);
+    border: 1px solid var(--color-fifth);
+}
+*/
+
+/*test*/
+.btn-tuto2 {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    border-radius: 30px;
+    letter-spacing: 4px;
+    border: 1px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 20px;
+    border-collapse: collapse;
+
+}
+
+.btn-tuto2:hover {
+    background: #0080ff;
+    color: #000000;
+    border-radius: 30px;
+    box-shadow: 0 0 5px #233a54,
+        0 0 25px #233a54,
+        0 0 50px #233a54,
+        0 0 100px #233a54;
+}
+
+/*test*/
+
+/*Responsividade*/
+@media (max-width: 1472px) {
+    .tutoriais-content {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .tutoriais-list {
+        flex-direction: column;
+    }
+
+    .tutoriais {
+        height: 80%;
+    }
+
+    .tutoriais-list-item {
+        margin-bottom: 40px;
+    }
+
+    .btn-tuto {
+        font-size: 30px;
+        width: 400px;
+        height: 190px;
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .btn-tuto {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .btn-tuto {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 850px) {
+    .tutoriais-content {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 700px) {
+    .pilars {
+        height: 170vh;
+    }
+
+    .pilars-subcont h3 {
+        font-size: 4vmin;
+    }
+
+    .pilars-subcont h4 {
+        font-size: 3vmin;
+    }
+
+    .pilars-subcont li {
+        font-size: 3vmin;
+    }
+
+    .pilars-subcont {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 414px) {
+    .btn-tuto {
+        width: 300px;
+        height: 130px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 620px) {
+    .pilars {
+        height: 160vh;
+    }
+
+    .pilars-subcont h3 {
+        font-size: 4vmin;
+    }
+
+    .pilars-subcont h4 {
+        font-size: 3vmin;
+    }
+
+    .pilars-subcont li {
+        font-size: 3vmin;
+    }
+
+    .pilars-subcont {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media (max-width: 428px) {
+    .pilars {
+        height: 130vh;
+    }
+
+    .pilars-subcont {
+        width: 150%;
+        margin-bottom: 30px;
+    }
+
+    .pilars-subcont h3 {
+        font-size: 4vmin;
+    }
+
+    .pilars-subcont h4 {
+        font-size: 3vmin;
+    }
+
+    .pilars-subcont li {
+        font-size: 3vmin;
+    }
+}
+
+@media (max-width: 414px) {
+    .pilars {
+        height: 200vh;
+    }
+
+    .pilars-subcont h3 {
+        font-size: 4vmin;
+    }
+
+    .pilars-subcont h4 {
+        font-size: 3vmin;
+    }
+
+    .pilars-subcont li {
+        font-size: 3vmin;
+    }
+
+    .pilars-subcont {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
