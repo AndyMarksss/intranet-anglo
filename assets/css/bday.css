@@ -108,7 +108,7 @@
     align-items: center;
 
     /*Se tiver menos de 5, alterar 'space-batween' para 'space-evenly'*/
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     /*Se tiver menos de 5, alterar 'fit-content' para '100%'*/
     width: 100%;
